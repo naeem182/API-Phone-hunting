@@ -15,19 +15,21 @@
     <header>
         <h2 class="text-4xl">Phone hunting</h2>
     </header>
-    <main>
+    <main class="container mx-auto  mt-8">
+        <section class="bg-gray-50 p-4 m-4">
+            <input id="searchfield" type="text" placeholder="serch" class="input input-bordered w-full max-w-xs" />
+            <button onclick="HandleSearch()" class="btn btn-accent">Search</button>
+        </section>
         <!-- daisy card -->
+        <section>
+            <div id="phone_ontainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-8
+            ">
 
-        <div class="card w-96 bg-base-100 shadow-xl">
-            <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-            <div class="card-body">
-                <h2 class="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                </div>
+
+
             </div>
-        </div>
+        </section>
+
     </main>
 
     <script src="js/phone.js"></script>
