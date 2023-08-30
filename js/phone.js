@@ -10,9 +10,22 @@ const loadphone = async (searchtext) => {
 }
 const displayPhones = phones => {
 
-    const phonecontainer = document.getElementById('phone_ontainer')
+    const phonecontainer = document.getElementById('phone_container')
     //clear data
     phonecontainer.textContent = ''
+
+    //display show all btn if card name is getter than 10
+
+    const showallContainer = document.getElementById('show-all-container')
+    if (phones.length > 10) {
+        showallContainer.classList.remove('hidden')
+    }
+    else {
+        showallContainer.classList.add('hidden')
+    }
+    //display only first 10 phones
+    phones = phones.slice(0, 10);
+
 
     phones.forEach(phone => {
         console.log(phone);
